@@ -15,7 +15,7 @@ const Navbar = () => {
           <img
             src={Logo}
             className="me-2"
-            height="30"
+            height="40"
             alt="MDB Logo"
             loading="lazy"
           />
