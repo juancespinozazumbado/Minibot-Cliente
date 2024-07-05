@@ -1,19 +1,25 @@
 import React from 'react'
+import Logo from '../../assets/img/Logo.jpg'
+
+const navbarStyle = {
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Your desired box-shadow style
+};
 
 const Navbar = () => {
   return (
    
-    <nav className="navbar navbar-light bg-dark">
+    <nav className="navbar navbar-light bg-light shadow-lg"
+       style={navbarStyle}>
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
+            src={Logo}
             className="me-2"
-            height="20"
+            height="30"
             alt="MDB Logo"
             loading="lazy"
           />
-          <small>MDBootstrap</small>
+          <small>XumTech</small>
         </a>
       </div>
     </nav>
