@@ -59,4 +59,4 @@ jobs:
           app-name: 'minibot-cliente'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A7A7F22D804449378923FD7303B70563 }}
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
