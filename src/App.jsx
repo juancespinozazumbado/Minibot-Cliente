@@ -16,8 +16,7 @@ function App() {
     <>
       <div>
         <Navbar />
-        <Sidebar />
-          <div className="content bg-light-subtle" style={{ marginLeft: '200px', paddingTop: '60px', paddingBottom: '40px' }}>
+          <div className="content bg-light-subtle" >
           <Chat />
         </div>
         <Footer />
