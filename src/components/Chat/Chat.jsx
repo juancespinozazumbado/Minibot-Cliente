@@ -69,6 +69,7 @@ const Chat = () => {
           type="text"
           className="form-control"
           value={input}
+          placeholder='Escribe una consulta...'
           onChange={(e) => setInput(e.target.value)}
         />
         <div className="input-group-append m-1">
