@@ -1,8 +1,30 @@
-# React + Vite
+# Mini Chatbot
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Contiene el Cliente web de la aplicacion Chatbot. El mismo esta en su version inicial y puede ser+
+escalado a una solucion que se pueda embeber en un sitio web o bien una aplicacion real.
 
-Currently, two official plugins are available:
+## tecnologias usadas: 
+  - Javascript como principal lenguaje de programacion.
+  - React js como libreria principal de javascript.
+  - Bootsrap como libraria para el estilo.
+  - Axios para realizar consultas HTTP al backend.
+  - Vite como herramienta para mejorar el rendimiento.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Funcioanlidades
+
+ La funcionalidad principal es la sala de chat donde se realizan consultas y 
+ el servicio genera las respuestas basadas en datos percistidos.
+ 
+ la capa de negocios de esta aplicacion se puede ver en [Chatboot-Backend](https://github.com/juancespinozazumbado/MiniBot-Backend).
+
+Para instalar la aplicacion local siga los siguentes pasos:
+   clone el repositorio donde prefiera 
+
+   `git clone https://github.com/juancespinozazumbado/Minibot-Cliente.git`
+   
+   pocicionece en la carpeta del projectyo (Rooot) `cd Minibot.Cliente`
+
+   instale las dependencias `npm install`
+
+   ejecute en development `npm run dev`
+   
