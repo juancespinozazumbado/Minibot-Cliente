@@ -13,4 +13,15 @@ const sendMessage = async (message) => {
   }
 };
 
-export { sendMessage };
+
+const fetchConsultasPosibles = async () => {
+  try {
+    const response = await axios.post(`${API_URL}/chat/consultas`, { texto : message });
+    return response.data;
+  } catch (error) {
+    console.error('Error sending message:', error);
+    throw error;
+  }
+};
+
+export { sendMessage, fetchConsultasPosibles };

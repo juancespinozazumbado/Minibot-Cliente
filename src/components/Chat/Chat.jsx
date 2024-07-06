@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { sendMessage } from '../../Service/ChatService.js';
 
 const firstMessages = [
-  { message: "Hola! mi nombre es Boty y soy tu asistente virtual, como puedo ayudarte?..", bot: true },
+  { message: "¡Hola! Soy Boti tu asistente virtual, ¿Como puedo ayudarte?..", bot: true },
 ];
 
 localStorage.setItem('messages', JSON.stringify(firstMessages));
