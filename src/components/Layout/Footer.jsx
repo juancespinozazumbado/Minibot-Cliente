@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="bg-body-tertiary text-center text-lg-start">
 
       <div className="text-center p-3" style={{backgroundcolor: 'rgba(0, 0, 0, 0.05)'}}>
-         Con ❤️:
+         Con ❤️
         <a className="text-body" href="https://github.com/juancespinozazumbado/"> @jcespinoza</a>
       </div>
     </footer>
