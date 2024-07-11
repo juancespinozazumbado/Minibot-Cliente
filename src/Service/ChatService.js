@@ -8,7 +8,7 @@ const sendMessage = async (message) => {
     const response = await axios.post(`${API_URL}/chat/send`, { texto : message });
     return response.data;
   } catch (error) {
-    console.error('Error sending message:', error);
+    console.error('Error al consultar el servicio:', error);
     throw error;
   }
 };
@@ -19,7 +19,7 @@ const fetchConsultasPosibles = async () => {
     const response = await axios.post(`${API_URL}/chat/consultas`, { texto : message });
     return response.data;
   } catch (error) {
-    console.error('Error sending message:', error);
+    console.error('Sucedio un error al consultar el servicio:', error);
     throw error;
   }
 };

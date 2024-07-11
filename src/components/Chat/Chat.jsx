@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
 import { sendMessage } from '../../Service/ChatService.js';
-import { json } from 'react-router-dom';
 
 const firstMessages = [
   { message: "¡Hola! Soy Boti tu asistente virtual, ¿Como puedo ayudarte?..", bot: true },
@@ -12,7 +11,7 @@ const Chat = () => {
   const [input, setInput] = useState('');
 
   useEffect(() => {
-    const storedMessages = JSON.parse(localStorage.getItem('messages')) || firstMessages;
+    const storedMessages = JSON.parse(localStorage.getItem('mensajesList')) || firstMessages;
     setMessages(storedMessages);
   }, []);
 
@@ -21,29 +20,30 @@ const Chat = () => {
       const userMessage = { message: input, bot: false };
       const updatedMessages = [...messages, userMessage];
       setMessages(updatedMessages);
-      localStorage.setItem('messages', JSON.stringify(updatedMessages));
+      localStorage.setItem('mensajesList', JSON.stringify(updatedMessages));
 
       try {
         const response = await sendMessage(input);
         const botMessage = { message: response.respuesta, bot: true };
         const finalMessages = [...updatedMessages, botMessage];
         setMessages(finalMessages);
-        localStorage.setItem('messages', JSON.stringify(finalMessages));
+        localStorage.setItem('mensajesList', JSON.stringify(finalMessages));
         setInput('');
       } catch (error) {
-        console.error('Error sending message:', error);
+        console.error('Sucedio el siguente error:', error);
       }
     }
   };
 
+  //para limpiar el chat
   const handleClearChat = async() => {
     setMessages([]);
-    localStorage.removeItem('messages');
+    localStorage.removeItem('mensajesList');
     
     await new Promise((resolve) => setTimeout(resolve, 500));
     
     setMessages(firstMessages);
-    localStorage.setItem('messages', JSON.stringify(firstMessages));
+    localStorage.setItem('mensajesList', JSON.stringify(firstMessages));
 
   };
 
