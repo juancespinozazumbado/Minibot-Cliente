@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from '../../assets/img/Logo.jpg'
 
 const navbarStyle = {
-  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // Your desired box-shadow style
+  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
 };
 
 const Navbar = () => {
